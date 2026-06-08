@@ -1,0 +1,31 @@
+{
+  "name": "mimo-api-gateway-toolkit",
+  "version": "0.1.0",
+  "description": "OpenAI-compatible local gateway, SDK, and CLI for Xiaomi MiMo API workflows.",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {"mimo-gateway": "dist/cli.js"},
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "cli": "tsx src/cli.ts",
+    "test": "vitest run",
+    "lint": "eslint src test --ext .ts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pino": "^9.3.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "eslint": "^9.9.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
